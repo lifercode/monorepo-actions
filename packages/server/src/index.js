@@ -6,7 +6,6 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-  console.log({ req })
   return res.json({ text: 'hello world from API' })
 })
 
