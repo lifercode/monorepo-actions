@@ -3,6 +3,8 @@ name: CI Client
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'packages/client/**'
 
 jobs:
   build:

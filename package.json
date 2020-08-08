@@ -1,0 +1,14 @@
+{
+  "name": "monorepo-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "repository": "git@github.com:lifercode/monorepo-actions.git",
+  "author": "André Murilo <lifercode@gmail.com>",
+  "license": "MIT"
+}
