@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
-
+console.log('hi')
 const App = () => {
   const [isLoading, setLoading] = useState(true)
   const [text, setText] = useState('')
