@@ -20,4 +20,4 @@ jobs:
           cd packages/client
           yarn
           yarn build
-          npx netlify-cli deploy --dir=packages/client/build --prod
+          npx netlify-cli deploy --dir=build --prod
