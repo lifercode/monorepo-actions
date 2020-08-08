@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div>
-      <p style={{color:'blue'}}>{isLoading ? 'Loading...' : text}</p>
+      <p style={{color:'green'}}>{isLoading ? 'Loading...' : text}</p>
     </div>
   );
 }
