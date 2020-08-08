@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000
 app.use(cors())
 
 app.get('/', (req, res) => {
-  return res.json({ text: 'hello world from API' })
+  return res.json({ text: 'hello world from API - teste' })
 })
 
 app.listen(PORT, () => console.log(`run on ${PORT}`))
