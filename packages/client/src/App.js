@@ -8,6 +8,7 @@ const App = () => {
   const fetchData = useCallback(async () => {
     try {
       const result = await axios.get('http://localhost:5000/')
+      console.log({result})
       setText(result.data.text)
       setLoading(false)
     } catch (error) {
