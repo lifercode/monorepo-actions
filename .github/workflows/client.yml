@@ -7,16 +7,15 @@ on:
       - 'packages/client/**'
 
 jobs:
-  build:
+  deploy:
+    name: 'Deploy on Netlify'
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Run a one-line script
-      run: echo Hello, world! on client!
-
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - uses: actions/checkout@v1
+      - uses: jsmrcaga/action-netlify-deploy@master
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: 'packages/client/build'
